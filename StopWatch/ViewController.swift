@@ -18,19 +18,18 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     
     @IBOutlet weak var lblTimer: UILabel!
+    @IBOutlet weak var navBar: UINavigationItem!
     
     @IBAction func startStopWatch(sender: AnyObject) {
         if(!timer.valid) {
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("result"), userInfo: nil, repeats: true)
             println("Timer Started")
+            navBar.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Pause, target: self, action: "startStopWatch:")
         } else {
-            println("Timer already started!")
+            timer.invalidate()
+            println("Timer Paused!")
+            navBar.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Play, target: self, action: "startStopWatch:")
         }
-    }
-    
-    @IBAction func pauseStopWatch(sender: AnyObject) {
-        timer.invalidate()
-        println("Timer Paused")
     }
     
     @IBAction func cancelStopWatch(sender: AnyObject) {

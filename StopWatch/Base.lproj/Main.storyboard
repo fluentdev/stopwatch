@@ -48,31 +48,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQe-CS-v4h">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="pause" id="hJg-m5-2bd">
-                                        <connections>
-                                            <action selector="pauseStopWatch:" destination="vXZ-lx-hvc" id="brx-Xe-0Zm"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lQe-CS-v4h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="6gQ-Lv-e9d"/>
                             <constraint firstAttribute="centerY" secondItem="7j3-20-pzI" secondAttribute="centerY" id="Buv-28-5os"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lQe-CS-v4h" secondAttribute="trailing" constant="-16" id="MRq-i8-lOS"/>
                             <constraint firstAttribute="centerX" secondItem="7j3-20-pzI" secondAttribute="centerX" id="NlG-1E-bQm"/>
                             <constraint firstItem="5rd-Bi-NiC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="XPs-Kd-bpZ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lQe-CS-v4h" secondAttribute="bottom" id="eF2-QP-gFU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5rd-Bi-NiC" secondAttribute="trailing" constant="-16" id="idO-tA-rwy"/>
                             <constraint firstItem="5rd-Bi-NiC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="w70-YZ-2aM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lblTimer" destination="7j3-20-pzI" id="jIC-f4-dYl"/>
+                        <outlet property="navBar" destination="iSq-Yq-4up" id="YmU-H6-tgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
